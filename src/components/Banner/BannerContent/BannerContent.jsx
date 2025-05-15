@@ -45,7 +45,7 @@ const BannerContent = ({openModal}) => {
             <h2>
                 Llevate un pase para experimentar el juego más aclamado entre nuestras reviews.
             </h2>
-            <CTA openModal = {openModal}/>
+            <CTA onClick = {openModal}/>
         </StyledBannerContent>
     );
 };

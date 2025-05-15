@@ -16,9 +16,9 @@ border: none;
 }
 `
 
-const CTA = ({openModal}) => {
+const CTA = ({onClick}) => {
     return (
-        <StyledCTA onClick = {openModal} >
+        <StyledCTA onClick = {onClick}>
             Conseguir ahora
         </StyledCTA>
     );

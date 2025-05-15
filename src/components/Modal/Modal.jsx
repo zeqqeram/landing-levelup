@@ -1,6 +1,8 @@
 import styled from "styled-components";
 import Form from "./Form/Form";
 import CTA from "../CTA/CTA";
+import { useState } from "react";
+
 
 const StyledModal = styled.div`
 width: 100%;
@@ -31,6 +33,10 @@ flex-direction: column;
 justify-content: center;
 gap: 1.5rem;
 padding: 1.5rem;
+
+p {
+    font: ${({theme}) => theme.fonts.sectionTitle};
+}
 `
 
 const StyledCloseModal = styled.button`
@@ -43,21 +49,61 @@ const StyledCloseModal = styled.button`
 `
 
 const Modal = ({showModal, closeModal}) => {
+    
+    const [formData, setFormData] = useState({
+        nombre: "",
+        mail: "",
+        mensaje: ""
+    });
+
+    const handleChange = (e) => {
+        const {name, value} = e.target;
+        setFormData((prev) => {
+            const update = {
+                ...prev, [name]: value,
+            };
+            console.log (update);
+            return update;
+        });
+        };
+
+        const [isSubmitted, setIsSubmitted] = useState(false);
+
+        const handleSubmit = (e) => {
+            e.preventDefault();
+            setIsSubmitted (true);
+        };
+
     return (
         <StyledModal $showModal = {showModal}>
-            <StyledModalContent>
+                <StyledModalContent>
                 <StyledCloseModal onClick={closeModal}>
                     <img src="img/cancel.png" alt="botón para cerrar el modal"/>
                 </StyledCloseModal>
+                { isSubmitted ? (
+                    <p>
+                        { `Felicitaciones, ${formData.nombre} ya sos parte de esta aventura, te enviamos un mail a ${formData.mail} con tu free pass` }
+                    </p>
+                ) : (
+                    <>
                 <Form 
                     text = "¿Cómo te llamas?" 
                     name = "nombre"
+                    value = {formData.nombre}
+                    onChange = {handleChange}
                 />
                 <Form 
                     text = "Dejanos tu mail"
                     name = "mail"
+                    value = {formData.mail}
+                    onChange = {handleChange}
                 />
-                <CTA/>
+                <CTA
+                    onClick = {handleSubmit}
+                />
+                </>
+                )
+            }
             </StyledModalContent>
         </StyledModal>
     );

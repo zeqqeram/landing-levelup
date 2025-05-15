@@ -15,7 +15,7 @@ gap: 1rem;
 }
 `
 
-const Form = ({text, name}) => {
+const Form = ({text, name, value, onChange, onSubmit}) => {
     return (
         <StyledForm>
             <label className="label">
@@ -23,8 +23,10 @@ const Form = ({text, name}) => {
             </label>
             <input
                 className="input"
-                type="text"
-                name={name}
+                type = "text"
+                name = {name}
+                value = {value}
+                onChange = {onChange}
             >
             </input>
         </StyledForm>
