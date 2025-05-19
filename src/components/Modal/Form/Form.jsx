@@ -12,10 +12,20 @@ gap: 1rem;
 .input {
     padding: 1rem .5rem;
     font: ${({theme}) => theme.fonts.body};
+    border: 1px solid #c1c1c1;
 }
+
+.input:focus{
+    border: 2px solid ${({theme}) => theme.colors.secondary};
+}
+
+.input:invalid {
+border-color: red;
+}
+
 `
 
-const Form = ({text, name, value, onChange, onSubmit}) => {
+const Form = ({text, name, type, value, onChange, onBlur}) => {
     return (
         <StyledForm>
             <label className="label">
@@ -23,10 +33,11 @@ const Form = ({text, name, value, onChange, onSubmit}) => {
             </label>
             <input
                 className="input"
-                type = "text"
+                type = {type}
                 name = {name}
                 value = {value}
                 onChange = {onChange}
+                onBlur = {onBlur}
             >
             </input>
         </StyledForm>

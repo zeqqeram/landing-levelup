@@ -40,7 +40,7 @@ const FormSection = ({openModal}) => {
             <p>
                 No te quedes afuera de esta experiencia que ya muchos están disfrutando. Obtené tu pase y que comience la aventura.
             </p>
-            <CTA onClick = {openModal} />
+            <CTA onClick = {openModal} active/>
         </StyledFormSection>
     );
 };

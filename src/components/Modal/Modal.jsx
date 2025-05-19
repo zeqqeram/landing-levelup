@@ -25,27 +25,45 @@ padding: 1.5625rem;
 const StyledModalContent = styled.div`
 position: relative;
 width: 100%;
-height: 100%;
-background-color: #fff;
+height: auto;
+background-color: #c1c1c1;
 border-radius: .625rem;
 display: flex;
 flex-direction: column;
 justify-content: center;
 gap: 1.5rem;
-padding: 1.5rem;
+padding: 3rem;
+
+h2 {
+    font: ${({theme}) => theme.fonts.sectionTitle};
+}
 
 p {
-    font: ${({theme}) => theme.fonts.sectionTitle};
+    font: ${({theme}) => theme.fonts.body};
+}
+
+span {
+    color: ${({theme}) => theme.colors.accent};
 }
 `
 
 const StyledCloseModal = styled.button`
-    position: absolute;
-    top: 1rem;
-    right: 1rem;
-    background: none;
-    border: none;
-    cursor: pointer;
+    display: none;
+
+    @media (min-width: 768px) {
+    }
+
+    @media (min-width: 1024px) {
+        position: absolute;
+        top: .5rem;
+        right: .75rem;
+        background: none;
+        border: none;
+        cursor: pointer;
+        p {
+            font: ${({theme}) => theme.fonts.callToAction};
+        }
+    }
 `
 
 const Modal = ({showModal, closeModal}) => {
@@ -58,48 +76,71 @@ const Modal = ({showModal, closeModal}) => {
 
     const handleChange = (e) => {
         const {name, value} = e.target;
-        setFormData((prev) => {
-            const update = {
-                ...prev, [name]: value,
-            };
-            console.log (update);
-            return update;
-        });
-        };
+        setFormData(prev => ({
+            ...prev, [name]: value,
+        }));
+    };
 
-        const [isSubmitted, setIsSubmitted] = useState(false);
+    const [isSubmitted, setIsSubmitted] = useState(false);
 
-        const handleSubmit = (e) => {
-            e.preventDefault();
-            setIsSubmitted (true);
-        };
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        setIsSubmitted (true);
+    };
+
+    const [isValidName, setIsValidName] = useState (false);
+    const [isValidMail, setIsValidMail] = useState (false);
+
+    const handleBlur = (e) => {
+        const {name, value} = e.target;
+        if (name === "nombre") {
+            setIsValidName(/^[A-Za-zÁÉÍÓÚáéíóúÑñ\s]+$/.test(value.trim()));
+        }
+        
+        if (name === "mail") {
+            setIsValidMail(/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value.trim()));
+        }
+    }
+
+    const formValid = isValidName && isValidMail; 
 
     return (
         <StyledModal $showModal = {showModal}>
                 <StyledModalContent>
                 <StyledCloseModal onClick={closeModal}>
-                    <img src="img/cancel.png" alt="botón para cerrar el modal"/>
+                <p> x </p>
                 </StyledCloseModal>
-                { isSubmitted ? (
+                { formValid && isSubmitted ? (
+                    <>
+                    <h2>
+                        ¡Muchas gracias, <span>{formData.nombre}</span>!
+                    </h2>
                     <p>
-                        { `Felicitaciones, ${formData.nombre} ya sos parte de esta aventura, te enviamos un mail a ${formData.mail} con tu free pass` }
+                        Revisá tu mail <span>{formData.mail}</span> para encontrar tu primer código de descuento y prestá atención a tu casilla durante los siguientes meses ;)
                     </p>
+                    </>
+
                 ) : (
                     <>
                 <Form 
                     text = "¿Cómo te llamas?" 
                     name = "nombre"
+                    type = "text"
                     value = {formData.nombre}
                     onChange = {handleChange}
+                    onBlur = {handleBlur}
                 />
                 <Form 
                     text = "Dejanos tu mail"
                     name = "mail"
+                    type = "email"
                     value = {formData.mail}
                     onChange = {handleChange}
+                    onBlur = {handleBlur}
                 />
                 <CTA
                     onClick = {handleSubmit}
+                    active = {formValid}
                 />
                 </>
                 )

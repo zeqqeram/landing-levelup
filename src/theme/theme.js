@@ -4,7 +4,8 @@ const theme = {
         secondary: '#1c1c1c',
         accent: '#f33535',
         contrast: '#52555b',
-        darkContrast: '#414141'
+        darkContrast: '#414141',
+        accentLight: '#f3353575'
     },
     fonts: {
         title: "400 3rem 'Bebas Neue', sans-serif",

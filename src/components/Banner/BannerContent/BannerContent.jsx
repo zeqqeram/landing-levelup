@@ -43,9 +43,9 @@ const BannerContent = ({openModal}) => {
                 ¡Disfrutá del mejor juego del mes!
             </h1>
             <h2>
-                Llevate un pase para experimentar el juego más aclamado entre nuestras reviews.
+                Recibí cada mes un pase de descuento en tu mail para experimentar el juego más aclamado entre nuestras reviews.
             </h2>
-            <CTA onClick = {openModal}/>
+            <CTA onClick = {openModal} active/>
         </StyledBannerContent>
     );
 };
