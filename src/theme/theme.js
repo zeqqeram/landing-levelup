@@ -5,7 +5,8 @@ const theme = {
         accent: '#f33535',
         contrast: '#52555b',
         darkContrast: '#414141',
-        accentLight: '#f3353575'
+        accentLight: '#f33535b3',
+        secondaryLight: '#1c1c1cb3',
     },
     fonts: {
         title: "400 3rem 'Bebas Neue', sans-serif",

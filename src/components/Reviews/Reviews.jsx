@@ -39,8 +39,8 @@ const Reviews = () => {
                 Últimos juegos regalados
             </h2>
             <StyleReviewsList>
-                <Review gameImg = "img/game1.png"/>
-                <Review gameImg = "img/game2.png"/>
+                <Review gameImg = "img/game1.png" descuento = "30%"/>
+                <Review gameImg = "img/game2.png" descuento = "25%"/>
                 <Review gameImg = "img/game3.png"/>
             </StyleReviewsList>
         </StyledReviews>

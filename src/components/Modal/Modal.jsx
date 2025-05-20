@@ -74,11 +74,17 @@ const Modal = ({showModal, closeModal}) => {
         mensaje: ""
     });
 
+    const [isValidName, setIsValidName] = useState (false);
+    const [isValidMail, setIsValidMail] = useState (false);
+
     const handleChange = (e) => {
         const {name, value} = e.target;
         setFormData(prev => ({
             ...prev, [name]: value,
         }));
+        if (name === "mail") {
+            setIsValidMail(/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value.trim()));
+        }
     };
 
     const [isSubmitted, setIsSubmitted] = useState(false);
@@ -88,24 +94,23 @@ const Modal = ({showModal, closeModal}) => {
         setIsSubmitted (true);
     };
 
-    const [isValidName, setIsValidName] = useState (false);
-    const [isValidMail, setIsValidMail] = useState (false);
-
     const handleBlur = (e) => {
         const {name, value} = e.target;
         if (name === "nombre") {
             setIsValidName(/^[A-Za-zÁÉÍÓÚáéíóúÑñ\s]+$/.test(value.trim()));
-        }
-        
-        if (name === "mail") {
-            setIsValidMail(/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value.trim()));
-        }
+        }  
     }
+
+    const handleOverlayClick = (e) => {
+        if (e.target === e.currentTarget) {
+            closeModal(true);
+        }
+    };
 
     const formValid = isValidName && isValidMail; 
 
     return (
-        <StyledModal $showModal = {showModal}>
+        <StyledModal $showModal = {showModal} onClick = {handleOverlayClick}>
                 <StyledModalContent>
                 <StyledCloseModal onClick={closeModal}>
                 <p> x </p>
