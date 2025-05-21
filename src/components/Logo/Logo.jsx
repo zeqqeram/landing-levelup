@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 const LogoStyled = styled.div`
 width: auto;
-height: auto;
+height: 2.125rem;
 
 img{
     width: 100%;

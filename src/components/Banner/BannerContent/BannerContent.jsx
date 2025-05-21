@@ -7,7 +7,7 @@ display: flex;
 flex-direction: column;
 justify-content: center;
 align-items: center;
-padding:  1.5625rem;
+padding: 4.5rem 1.5rem;
 gap: 1rem;
 color: ${({theme}) => theme.colors.primary};
 text-align: center;
@@ -19,7 +19,7 @@ h1 {
 
 h2 {
     font: ${({theme}) => theme.fonts.subtitle};
-    padding-bottom: 1rem;
+    padding-bottom: 2rem;
 }
 
 @media (min-width: 768px) {
@@ -43,7 +43,7 @@ const BannerContent = ({openModal}) => {
                 ¡Disfrutá del mejor juego del mes!
             </h1>
             <h2>
-                Recibí cada mes un pase de descuento en tu mail para experimentar el juego más aclamado entre nuestras reviews.
+                Llevate un cupón de descuento para experimentar el juego más aclamado entre nuestras reviews. 
             </h2>
             <CTA onClick = {openModal} active/>
         </StyledBannerContent>

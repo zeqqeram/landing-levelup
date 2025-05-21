@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 const StyledCTA = styled.button`
-padding: .9375rem;
+padding: .9375rem 1.875rem;
 font: ${({theme}) => theme.fonts.callToAction};
 background-color: ${({$active, theme}) => $active ? theme.colors.accent : theme.colors.accentLight};
 color: ${({theme}) => theme.colors.primary};

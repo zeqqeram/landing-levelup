@@ -8,8 +8,9 @@ display: flex;
 flex-direction: column;
 justify-content: center;
 gap: 1.125rem;
-background-color: #c1c1c1;
+background-color: ${({theme}) => theme.colors.grayUsers};
 border-radius: .75rem;
+color: ${({theme}) => theme.colors.primary};
 
 p {
     font: ${({theme}) => theme.fonts.body};

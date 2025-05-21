@@ -45,21 +45,21 @@ const Clients = () => {
             <StyledClientList>
                 <Client 
                     foto = "img/client1.png"
-                    nombre = "Mateo"
-                    titulo = "titulo de opinión"
-                    comentario = "está re piola este beneficio ya me jugué 3 juegos muy buenos gracias a él no me arrepiento de nada suscribanse!!1!1!"
+                    nombre = "Santi"
+                    titulo = "God"
+                    comentario = "Está re piola este beneficio ya me jugué 3 juegos muy buenos gracias a él y ya quiero ver cuales serán los siguientes 🔥"
                 />
                               <Client 
                     foto = "img/client2.png"
-                    nombre = "Jesica"
-                    titulo = "titulo de opinión"
-                    comentario = "está re piola este beneficio ya me jugué 3 juegos muy buenos gracias a él no me arrepiento de nada suscribanse!!1!1!"
+                    nombre = "Lucía"
+                    titulo = "Encantada"
+                    comentario = "Gracias a estos descuentos ya me pude comprar dos juegos que me encantaron. No se me habría ocurrido comprarlos a su precio normal así que me vino bárbaro este beneficio."
                 />
                 <Client 
                     foto = "img/client1.png"
-                    nombre = "Mateo"
-                    titulo = "titulo de opinión"
-                    comentario = "está re piola este beneficio ya me jugué 3 juegos muy buenos gracias a él no me arrepiento de nada suscribanse!!1!1!"
+                    nombre = "Tomi"
+                    titulo = "Tremendo"
+                    comentario = "Descubrí esta propuesta el mes pasado y con un amigo nos pudimos comprar el Split Fiction que nos encantó. Estamos ansiosos por ver cuál será el próximo descuento :)"
                 />
             </StyledClientList>
         </StyledClients>
