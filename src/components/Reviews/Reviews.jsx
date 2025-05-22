@@ -15,7 +15,8 @@ h2 {
 }
 
 @media (min-width: 1024px) {
-    padding: 4.0625rem;
+    padding: 0 4.5rem;
+    gap: 39px;
 
     h2 {
         font-size: 2.9375rem;
@@ -26,11 +27,13 @@ const StyleReviewsList = styled.div`
 display: flex;
 gap: 1.5rem;
 overflow-x: auto;
-overflow-y: hidden;
-height: 350.5px;
+
+@media (min-width: 768px) {
+}
 
 @media (min-width: 1024px) {
-    gap: 3.75rem;
+    gap: 55px;
+    overflow: hidden;
 }
 `
 

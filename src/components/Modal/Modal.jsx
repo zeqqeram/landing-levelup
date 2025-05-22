@@ -31,15 +31,16 @@ border-radius: .625rem;
 display: flex;
 flex-direction: column;
 justify-content: center;
-gap: 1.5rem;
-padding: 3rem;
+align-items: center;
+gap: 1.75rem;
+padding: 1.75rem 1.5rem;
 
 h2 {
     font: ${({theme}) => theme.fonts.sectionTitle};
 }
 
 p {
-    font: ${({theme}) => theme.fonts.body};
+    font: ${({theme}) => theme.fonts.bulletText};
 }
 
 span {
@@ -121,7 +122,7 @@ const Modal = ({showModal, closeModal}) => {
                         ¡Muchas gracias, <span>{formData.nombre}</span>!
                     </h2>
                     <p>
-                        Revisá tu mail <span>{formData.mail}</span> para encontrar tu primer código de descuento y prestá atención a tu casilla durante los siguientes meses ;)
+                        Para encontrar tu primer código de descuento, revisa tu mail <span>{formData.mail}</span> y prestá atención a tu casilla durante los siguientes meses ;)
                     </p>
                     </>
 

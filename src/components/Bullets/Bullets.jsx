@@ -14,7 +14,7 @@ background-color: ${({theme}) => theme.colors.secondary};
 @media (min-width: 1024px) {
     flex-direction: row;
     flex-wrap: wrap;
-    padding: 4.75rem 4.0625rem;
+    padding: 4.9375rem 4.0625rem 4.75rem;
     justify-content: center;
     gap: 3.4375rem;
 }

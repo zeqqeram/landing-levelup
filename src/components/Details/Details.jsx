@@ -18,13 +18,16 @@ p {
 }
 
 @media (min-width: 1024px) {
-padding: 4.5rem 1.5rem;
+padding: 4.5rem 4.0625rem;
+gap: 1.625rem;
+
 h2 {
-    font-size: 2.9375;
+    font-size: 2.9375rem;
 }
 
 p {
     font-size: 1.5rem;
+    line-height: 180%;
 }
 }
 `

@@ -1,9 +1,11 @@
 import styled from "styled-components";
 
 const StyledForm = styled.form`
+min-height: 43px;
+width: 340px;
 display: flex;
 flex-direction: column;
-gap: 1rem;
+gap: 1.3125rem;
 
 .label {
     font: ${({theme}) => theme.fonts.callToAction};

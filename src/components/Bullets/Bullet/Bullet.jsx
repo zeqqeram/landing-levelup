@@ -19,7 +19,15 @@ img {
 }
 
 @media (min-width: 1024px) {
-width: 400px;
+max-width: 400px;
+max-height: 110px;
+padding: 1.375rem;
+gap: 1rem;
+
+img {
+    width: 2.5rem;
+    height: auto;
+}
 }
 
 `

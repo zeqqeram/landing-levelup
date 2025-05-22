@@ -6,7 +6,7 @@ max-height: 211px;
 padding: 1.375rem 1.375rem 1.75rem;
 display: flex;
 flex-direction: column;
-justify-content: center;
+justify-content: flex-start;
 gap: .6875rem;
 background-color: ${({theme}) => theme.colors.grayUsers};
 border-radius: .75rem;
@@ -14,6 +14,20 @@ color: ${({theme}) => theme.colors.primary};
 
 p {
     font: ${({theme}) => theme.fonts.body};
+}
+
+@media (min-width: 768px) {
+}
+
+@media (min-width: 1024px) {
+    min-width: 420px;
+    max-height: 280px;
+    gap: 1.5rem;
+    padding: 1.75rem;
+
+    p{
+        font-size: 1.125rem;
+    }
 }
 `
 
@@ -24,6 +38,17 @@ gap: 1.125rem;
 img {
     width: 3.75rem;
     height: 3.75rem;
+}
+
+@media (min-width: 768px) {
+}
+
+@media (min-width: 1024px) {
+    gap: 1.5rem;
+img {
+    width: 5rem;
+    height: 5rem;
+}
 }
 `
 
@@ -38,6 +63,21 @@ h2 {
 
 h3 {
     font: ${({theme}) => theme.fonts.clientTitle};
+}
+
+@media (min-width: 768px) {
+}
+
+@media (min-width: 1024px) {
+    gap: 0.875rem;
+
+h2 {
+    font-size: 1.5625rem;
+}
+
+h3 {
+    font-size: 1.25rem; 
+}
 }
 `
 

@@ -15,7 +15,8 @@ h2 {
 }
 
 @media (min-width: 1024px) {
-    padding: 4.0625rem;
+    padding: 4.5rem 4.0625rem;
+    gap: 3.1875rem;
 
     h2 {
         font-size: 2.9375rem;
@@ -32,7 +33,8 @@ overflow-x: auto;
 }
 
 @media (min-width: 1024px) {
-gap: 1.6875rem;
+gap: 1.5625rem;
+overflow: hidden;
 }
 `
 

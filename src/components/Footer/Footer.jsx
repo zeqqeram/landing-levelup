@@ -11,6 +11,17 @@ img {
     width: 100%;
     height: 115px;
 }
+
+@media (min-width: 768px) {
+}
+
+@media (min-width: 1024px) {
+    height: 140px;
+    img {
+        height: 140px;
+        width: auto;
+    }
+}
 `
 const StyledFooterContainer = styled.div`
 width: 100%;
@@ -21,9 +32,19 @@ flex-direction: column;
 align-items: center;
 padding: 1.5rem;
 
-img {
+img { 
     width: 200px;
     height: 42px;
+}
+
+@media (min-width: 768px) {
+}
+
+@media (min-width: 1024px) {
+    img {
+        height: 64px;
+        width: auto;
+    }
 }
 ` 
 

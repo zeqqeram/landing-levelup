@@ -1,20 +1,22 @@
 import styled from "styled-components";
 
 const StyledReview = styled.div`
+min-width: 216px;
+max-height: 324px;
 display: flex;
 flex-direction: column;
-gap: .5rem;
 position: relative;
 
 img {
-    width: 216px;
-    height: 324px;
+    width: 100%;
+    height: 100%;
 }
 
 @media (min-width: 768px) {
 }
 
 @media (min-width: 1024px) {
+    
 min-width: 400px;
 max-height: 600px;
 }
@@ -24,15 +26,15 @@ const StyleReviewOff = styled.div`
 width: 100%;
 height: 53px;
 background: linear-gradient(
-    to top,
-    ${({theme}) => theme.colors.secondary},
+    to top, 
+    ${({theme}) => theme.colors.secondary}, 
     ${({theme}) => theme.colors.secondaryLight}
     );
 display: flex;
 justify-content: center;
 align-items: center;
 position: absolute;
-bottom: -26.5px;
+bottom: 0;
 
 font: ${({theme}) => theme.fonts.callToAction};
 
@@ -44,6 +46,13 @@ span {
     color: ${({theme}) => theme.colors.accent};
 }
 
+@media (min-width: 768px) {
+}
+
+@media (min-width: 1024px) {
+    height: 97px;
+    font-size: 50px;
+}
 `
 
 const Review = ({gameImg, descuento}) => {

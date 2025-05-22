@@ -9,6 +9,14 @@ background-color: ${({theme}) => theme.colors.blackHeader};
 display: flex;
 justify-content: flex-start;
 align-items: center;
+
+@media (min-width: 768px) {
+}
+
+@media (min-width: 1024px) {
+    height: 5.1875rem;
+    padding: 0 1.5rem;
+}
 `
 
 const Header = () => {

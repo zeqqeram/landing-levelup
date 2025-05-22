@@ -1,6 +1,8 @@
 import styled from "styled-components";
 
 const StyledCTA = styled.button`
+min-height: 70px;
+max-width: 196px;
 padding: .9375rem;
 font: ${({theme}) => theme.fonts.callToAction};
 background-color: ${({$active, theme}) => $active ? theme.colors.accent : theme.colors.accentLight};
@@ -12,6 +14,9 @@ border: none;
 }
 
 @media (min-width: 1024px) {
+    min-height: 114px;
+    max-width: 318px;
+    padding: 33px 20px;
     font-size: 2.8125rem;
 }
 `

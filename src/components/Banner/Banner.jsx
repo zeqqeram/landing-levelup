@@ -27,7 +27,7 @@ z-index: 1;
 }
 
 @media (min-width: 1024px) {
-    padding: 7.81255rem;
+    padding: 7.8125rem 7.8125rem 10.625rem;
 }
 `
 

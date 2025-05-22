@@ -9,12 +9,13 @@ img{
     height: 100%;
 }
 
-@media (max-width: 768px) {
+@media (min-width: 768px) {
 }
 
-@media (max-width: 1024px) {
+@media (min-width: 1024px) {
+    height: 4rem;
 }
-`;
+`
 
 const Logo = () => {
     return (

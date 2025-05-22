@@ -15,20 +15,26 @@ h2 {
 }
 
 p {
-    ${({theme}) => theme.fonts.body};
+    font: ${({theme}) => theme.fonts.body};
     padding-bottom: .5rem;
+    line-height: 180% ;
 }
 
 @media (min-width: 768px) {
 }
 
 @media (min-width: 1024px) {
+
+    padding: 106px 369px 70px;
+    gap: 39px;
+
     h2 {
         font-size: 2.9375rem;
     }  
 
     p {
         font-size: 1.5rem;
+        padding-bottom: 13px;
     }
 }
 `

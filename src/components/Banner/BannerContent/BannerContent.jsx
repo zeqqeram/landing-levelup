@@ -26,12 +26,17 @@ h2 {
 }
 
 @media (min-width: 1024px) {
+    padding: 0 11.9375rem;
+    gap: 1.125rem;
+
     h1 {
         font-size: 5.625rem;
+        padding: 0 7rem;
     }
 
     h2 {
         font-size: 2.1875rem;
+        padding: 0 0 1.4375rem;
     }
 }
 `
