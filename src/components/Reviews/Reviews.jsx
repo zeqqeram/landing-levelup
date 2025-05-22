@@ -4,7 +4,7 @@ import Review from "./Review/Review";
 const StyledReviews = styled.section`
 display: flex;
 flex-direction: column;
-padding:  1.5rem 0 1.5rem 1.5rem;
+padding:  2.25rem 1.5rem 0;
 gap: 1rem;
 
 h2 {
@@ -24,8 +24,10 @@ h2 {
 `
 const StyleReviewsList = styled.div`
 display: flex;
-gap: .75rem;
+gap: 1.5rem;
 overflow-x: auto;
+overflow-y: hidden;
+height: 350.5px;
 
 @media (min-width: 1024px) {
     gap: 3.75rem;
@@ -41,7 +43,7 @@ const Reviews = () => {
             <StyleReviewsList>
                 <Review gameImg = "img/game1.png" descuento = "30%"/>
                 <Review gameImg = "img/game2.png" descuento = "25%"/>
-                <Review gameImg = "img/game3.png"/>
+                <Review gameImg = "img/game3.png" descuento = "35%"/>
             </StyleReviewsList>
         </StyledReviews>
     );

@@ -4,7 +4,7 @@ const StyledDetails = styled.section`
 display: flex;
 flex-direction: column;
 padding:  1.5rem;
-gap: 1.625rem;
+gap: 1.6875rem;
 
 h2 {
     font: ${({theme}) => theme.fonts.sectionTitle};

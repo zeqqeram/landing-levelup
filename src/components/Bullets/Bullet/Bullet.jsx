@@ -2,11 +2,12 @@ import styled from "styled-components";
 
 const StyledBullet = styled.div`
 max-height: 90px;
+max-width: 328px;
 display: flex;
 align-items: center;
 gap: .875rem;
 background: ${({theme}) => theme.colors.darkContrast};
-padding: 1rem .5rem;
+padding: .875rem;
 color: ${({theme}) => theme.colors.primary};
 
 img {

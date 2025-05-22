@@ -4,8 +4,8 @@ import Client from "./Client/Client";
 const StyledClients = styled.section`
 display: flex;
 flex-direction: column;
-padding:  1.5rem 0 1.5rem 1.5rem;
-gap: 1.125rem;
+padding:  1.5rem 1.5rem 0;
+gap: 1.3125rem;
 
 h2 {
     font: ${({theme}) => theme.fonts.sectionTitle};
@@ -56,7 +56,7 @@ const Clients = () => {
                     comentario = "Gracias a estos descuentos ya me pude comprar dos juegos que me encantaron. No se me habría ocurrido comprarlos a su precio normal así que me vino bárbaro este beneficio."
                 />
                 <Client 
-                    foto = "img/client1.png"
+                    foto = "img/client3.png"
                     nombre = "Tomi"
                     titulo = "Tremendo"
                     comentario = "Descubrí esta propuesta el mes pasado y con un amigo nos pudimos comprar el Split Fiction que nos encantó. Estamos ansiosos por ver cuál será el próximo descuento :)"

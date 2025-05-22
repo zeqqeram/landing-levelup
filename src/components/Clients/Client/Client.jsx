@@ -3,11 +3,11 @@ import styled from "styled-components";
 const StyledClient = styled.div`
 min-width: 317px;
 max-height: 211px;
-padding: 1rem;
+padding: 1.375rem 1.375rem 1.75rem;
 display: flex;
 flex-direction: column;
 justify-content: center;
-gap: 1.125rem;
+gap: .6875rem;
 background-color: ${({theme}) => theme.colors.grayUsers};
 border-radius: .75rem;
 color: ${({theme}) => theme.colors.primary};
@@ -30,7 +30,7 @@ img {
 const StyledClientHeaderText = styled.div`
 display: flex;
 flex-direction: column;
-gap: .75rem;
+gap: .6875rem;
 
 h2 {
     font: ${({theme}) => theme.fonts.clientName};

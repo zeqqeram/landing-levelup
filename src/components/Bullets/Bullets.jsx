@@ -4,7 +4,7 @@ import Bullet from "./Bullet/Bullet";
 const StyledBullets = styled.section`
 display: flex;
 flex-direction: column;
-padding: 1.5rem 3rem;
+padding: 2rem 3.5rem 2.3125rem;
 gap: 1.625rem;
 background-color: ${({theme}) => theme.colors.secondary};
 

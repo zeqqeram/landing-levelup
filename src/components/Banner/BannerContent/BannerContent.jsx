@@ -7,7 +7,7 @@ display: flex;
 flex-direction: column;
 justify-content: center;
 align-items: center;
-padding: 4.5rem 1.5rem;
+padding: 4.4375rem 1.5625rem;
 gap: 1rem;
 color: ${({theme}) => theme.colors.primary};
 text-align: center;
@@ -19,7 +19,7 @@ h1 {
 
 h2 {
     font: ${({theme}) => theme.fonts.subtitle};
-    padding-bottom: 2rem;
+    padding: 0 2.375rem 1rem 2.375rem;
 }
 
 @media (min-width: 768px) {

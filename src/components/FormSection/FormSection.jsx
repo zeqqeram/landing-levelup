@@ -4,9 +4,11 @@ import CTA from "../CTA/CTA";
 const StyledFormSection = styled.section`
 display: flex;
 flex-direction: column;
+justify-content: center;
 align-items: center;
-padding: 4rem 2rem;
-gap: 1rem;
+text-align: center;
+padding: 3.8125rem 1.5rem 1.75rem;
+gap: .875rem;
 
 h2 {
     font: ${({theme}) => theme.fonts.sectionTitle};
@@ -14,7 +16,7 @@ h2 {
 
 p {
     ${({theme}) => theme.fonts.body};
-    padding-bottom: 1.5rem;
+    padding-bottom: .5rem;
 }
 
 @media (min-width: 768px) {
