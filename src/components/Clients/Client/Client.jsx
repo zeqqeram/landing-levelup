@@ -65,8 +65,10 @@ display: flex;
 flex-direction: column;
 gap: .6875rem;
 
-h2 {
+.nombreUser {
     font: ${({theme}) => theme.fonts.clientName};
+        padding: 0;
+
 }
 
 h3 {
@@ -79,8 +81,10 @@ h3 {
 @media (min-width: 1024px) {
     gap: 0.875rem;
 
-h2 {
+.nombreUser {
     font-size: 1.5625rem;
+    padding: 0;
+
 }
 
 h3 {
@@ -95,7 +99,7 @@ const Client = ({foto, nombre, titulo, comentario}) => {
                 <StyledClientHeader>
                     <img src= {foto} alt="foto del cliente" />
                     <StyledClientHeaderText>
-                        <h2>
+                        <h2 className="nombreUser">
                             {nombre}
                         </h2>
                         <h3>
