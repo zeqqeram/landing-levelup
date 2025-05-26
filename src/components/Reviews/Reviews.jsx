@@ -4,7 +4,7 @@ import Review from "./Review/Review";
 const StyledReviews = styled.section`
 display: flex;
 flex-direction: column;
-padding:  2.25rem 1.5rem 0;
+padding:  2.25rem 0 0 1.5rem;
 gap: 1rem;
 
 h2 {

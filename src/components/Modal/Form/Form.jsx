@@ -25,6 +25,16 @@ gap: 1.3125rem;
 border-color: red;
 }
 
+@media (min-width: 768px) {
+}
+
+@media (min-width: 1024px) {
+    width: 446px;
+.input {
+    font-size: 18px;
+}
+}
+
 `
 
 const Form = ({text, name, type, value, onChange, onBlur}) => {

@@ -4,23 +4,33 @@ import Client from "./Client/Client";
 const StyledClients = styled.section`
 display: flex;
 flex-direction: column;
-padding:  1.5rem 1.5rem 0;
+padding:  1.5rem 0 0;
 gap: 1.3125rem;
 
 h2 {
     font: ${({theme}) => theme.fonts.sectionTitle};
+    padding-left: 1.5rem;
 }
 
 @media (min-width: 768px) {
 }
 
 @media (min-width: 1024px) {
-    padding: 4.5rem 4.0625rem;
+    padding: 4.5rem 0;
     gap: 3.1875rem;
 
     h2 {
         font-size: 2.9375rem;
+        padding-left: 4.0625rem;
     }  
+}
+`
+const StyledClientListBack = styled.div`
+background-color: #777777;
+padding: 1.5rem 0 1.5rem 1.5rem ;
+
+@media (min-width: 1024px) {
+    padding: 1.5rem 4.0625rem;
 }
 `
 
@@ -44,6 +54,7 @@ const Clients = () => {
             <h2>
                 ¿Qué opinan nuestros usuarios?
             </h2>
+            <StyledClientListBack>
             <StyledClientList>
                 <Client 
                     foto = "img/client1.png"
@@ -64,6 +75,7 @@ const Clients = () => {
                     comentario = "Descubrí esta propuesta el mes pasado y con un amigo nos pudimos comprar el Split Fiction que nos encantó. Estamos ansiosos por ver cuál será el próximo descuento :)"
                 />
             </StyledClientList>
+            </StyledClientListBack>
         </StyledClients>
     );
 };

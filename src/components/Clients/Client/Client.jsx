@@ -8,12 +8,16 @@ display: flex;
 flex-direction: column;
 justify-content: flex-start;
 gap: .6875rem;
-background-color: ${({theme}) => theme.colors.grayUsers};
-border-radius: .75rem;
-color: ${({theme}) => theme.colors.primary};
+background-color: ${({theme}) => theme.colors.primary};
+border-radius: .3125rem;
+color: ${({theme}) => theme.colors.secondary};
 
 p {
     font: ${({theme}) => theme.fonts.body};
+}
+
+h2 {
+    padding: 0;
 }
 
 @media (min-width: 768px) {
@@ -27,6 +31,10 @@ p {
 
     p{
         font-size: 1.125rem;
+    }
+
+    h2 {
+        padding: 0;
     }
 }
 `

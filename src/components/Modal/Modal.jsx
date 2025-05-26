@@ -46,6 +46,14 @@ p {
 span {
     color: ${({theme}) => theme.colors.accent};
 }
+
+@media (min-width: 768px) {
+}
+
+@media (min-width: 1024px) {
+padding: 37px 70px 33px;
+max-width: 583px;
+}
 `
 
 const StyledCloseModal = styled.button`
