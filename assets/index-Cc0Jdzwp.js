@@ -347,8 +347,10 @@ display: flex;
 flex-direction: column;
 gap: .6875rem;
 
-h2 {
+.nombreUser {
     font: ${({theme:i})=>i.fonts.clientName};
+        padding: 0;
+
 }
 
 h3 {
@@ -361,15 +363,17 @@ h3 {
 @media (min-width: 1024px) {
     gap: 0.875rem;
 
-h2 {
+.nombreUser {
     font-size: 1.5625rem;
+    padding: 0;
+
 }
 
 h3 {
     font-size: 1.25rem; 
 }
 }
-`,lr=({foto:i,nombre:r,titulo:o,comentario:s})=>U.jsxs(nv,{children:[U.jsxs(iv,{children:[U.jsx("img",{src:i,alt:"foto del cliente"}),U.jsxs(cv,{children:[U.jsx("h2",{children:r}),U.jsx("h3",{children:o})]})]}),U.jsx("p",{children:s})]}),fv=Et.section`
+`,lr=({foto:i,nombre:r,titulo:o,comentario:s})=>U.jsxs(nv,{children:[U.jsxs(iv,{children:[U.jsx("img",{src:i,alt:"foto del cliente"}),U.jsxs(cv,{children:[U.jsx("h2",{className:"nombreUser",children:r}),U.jsx("h3",{children:o})]})]}),U.jsx("p",{children:s})]}),fv=Et.section`
 display: flex;
 flex-direction: column;
 padding:  1.5rem 0 0;
